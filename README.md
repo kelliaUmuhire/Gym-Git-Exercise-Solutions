@@ -637,7 +637,7 @@ To https://github.com/kelliaUmuhire/git-exercises.git
 
 ## Bundle 5
 
-### Exercise 5
+### Exercise 2
 
 ```bash
 The GYM>git clone https://github.com/kelliaUmuhire/git-cafe-exercise.git
@@ -667,4 +667,68 @@ Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/kelliaUmuhire/git-cafe-exercise.git
    d1d3f9c..c80145c  main -> main
+```
+
+## Bundle 6
+
+### Exercise 1
+
+```bash
+The GYM\git-cafe-exercise>git checkout ft/menu-page
+error: pathspec 'ft/menu-page' did not match any file(s) known to git
+
+The GYM\git-cafe-exercise>git checkout -b ft/menu-page
+Switched to a new branch 'ft/menu-page'
+
+The GYM\git-cafe-exercise>git add .
+
+The GYM\git-cafe-exercise>git commit -m "Added menu page"
+[ft/menu-page b706064] Added menu page
+ 1 file changed, 15 insertions(+)
+ create mode 100644 Menu.html
+
+The GYM\git-cafe-exercise>git push --set-upstream origin ft/menu-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 460 bytes | 460.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/menu-page' on GitHub by visiting:
+remote:      https://github.com/kelliaUmuhire/git-cafe-exercise/pull/new/ft/menu-page
+remote:
+To https://github.com/kelliaUmuhire/git-cafe-exercise.git
+ * [new branch]      ft/menu-page -> ft/menu-page
+branch 'ft/menu-page' set up to track 'origin/ft/menu-page'.
+```
+
+### Exercise 2
+
+```bash
+The GYM\git-cafe-exercise>git checkout -b bugfix/title-edit
+Switched to a new branch 'bugfix/title-edit'
+
+The GYM\git-cafe-exercise>git add .
+
+The GYM\git-cafe-exercise>git commit -m "Updated index-4.html title"
+[bugfix/title-edit 3ac7c7c] Updated index-4.html title
+ 1 file changed, 232 insertions(+), 164 deletions(-)
+
+The GYM\git-cafe-exercise>git push --set-upstream origin bugfix/title-edit
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.42 KiB | 1.42 MiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bugfix/title-edit' on GitHub by visiting:
+remote:      https://github.com/kelliaUmuhire/git-cafe-exercise/pull/new/bugfix/title-edit
+remote:
+To https://github.com/kelliaUmuhire/git-cafe-exercise.git
+ * [new branch]      bugfix/title-edit -> bugfix/title-edit
+branch 'bugfix/title-edit' set up to track 'origin/bugfix/title-edit'.
 ```
