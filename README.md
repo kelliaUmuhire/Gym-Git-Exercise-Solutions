@@ -732,3 +732,10 @@ To https://github.com/kelliaUmuhire/git-cafe-exercise.git
  * [new branch]      bugfix/title-edit -> bugfix/title-edit
 branch 'bugfix/title-edit' set up to track 'origin/bugfix/title-edit'.
 ```
+
+### Exercise 3
+
+```bash
+The GYM\git-cafe-exercise>git checkout -b hotfix/contact-page
+Switched to a new branch 'hotfix/contact-page'
+```
