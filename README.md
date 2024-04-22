@@ -349,3 +349,138 @@ Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/kelliaUmuhire/git-exercises.git
    51a94c9..d8618e3  ft/service-redesign -> ft/service-redesign
 ```
+
+## Bundle 3
+
+### Exercise 1
+
+```bash
+The GYM\git-exercises>git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+The GYM\git-exercises>git add team.html
+
+The GYM\git-exercises>git commit -m "Added team page"
+[ft/team-page 789e0c0] Added team page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+
+The GYM\git-exercises>git push origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 430 bytes | 430.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/kelliaUmuhire/git-exercises/pull/new/ft/team-page
+remote:
+To https://github.com/kelliaUmuhire/git-exercises.git
+ * [new branch]      ft/team-page -> ft/team-page
+
+The GYM\git-exercises>git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+The GYM\git-exercises>git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+The GYM\git-exercises>git checkout ft/team-page
+Switched to branch 'ft/team-page'
+
+The GYM\git-exercises>git log --oneline
+789e0c0 (HEAD -> ft/team-page, origin/ft/team-page) Added team page
+e944465 (origin/main, main, ft/contact-page) Added changes to services page
+fdc23b2 Merge pull request #2 from kelliaUmuhire/ft/bundle-2
+fe381f1 (origin/ft/bundle-2, ft/bundle-2) Added services page
+e2707d0 (origin/dev, dev) Home page & about page
+92106d5 Reset for bundle 1 exercise 2
+55122da Home and about page
+b4710cd Added README.md
+
+The GYM\git-exercises>git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+The GYM\git-exercises>git cherry-pick 789e0c0
+[ft/contact-page 36e0779] Added team page
+ Date: Mon Apr 22 16:58:51 2024 +0200
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+
+The GYM\git-exercises>git add contact.html
+
+The GYM\git-exercises>git commit -m "Added contact page"
+[ft/contact-page 6e6fcb5] Added contact page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 contact.html
+
+The GYM\git-exercises>git push --set-upstream origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 701 bytes | 701.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/kelliaUmuhire/git-exercises/pull/new/ft/contact-page
+remote:
+To https://github.com/kelliaUmuhire/git-exercises.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+The GYM\git-exercises>git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+
+The GYM\git-exercises>git add faq.html
+
+The GYM\git-exercises>git commit -m "Added faq page"
+[ft/faq-page cef4dd8] Added faq page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+
+The GYM\git-exercises>git push
+fatal: The current branch ft/faq-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/faq-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+The GYM\git-exercises>git push --set-upstream origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 428 bytes | 428.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/kelliaUmuhire/git-exercises/pull/new/ft/faq-page
+remote:
+To https://github.com/kelliaUmuhire/git-exercises.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+The GYM\git-exercises>git revert 789e0c0
+[ft/faq-page c96f4e0] Revert "Added team page"
+ 1 file changed, 11 deletions(-)
+ delete mode 100644 team.html
+
+The GYM\git-exercises>git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 271 bytes | 271.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/kelliaUmuhire/git-exercises.git
+   cef4dd8..c96f4e0  ft/faq-page -> ft/faq-page
+```
