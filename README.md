@@ -561,3 +561,43 @@ To https://github.com/kelliaUmuhire/git-exercises.git
  * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
 branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 ```
+
+## Bundle 4
+
+### Exercise 1
+
+```bash
+The GYM\git-exercises>git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+The GYM\git-exercises>git remote add git-copy https://github.com/kelliaUmuhire/git-exercises-copy.git
+
+The GYM\git-exercises>git add .
+
+The GYM\git-exercises>git commit -m "Updated home page"
+[main a3b6746] Updated home page
+ 1 file changed, 1 insertion(+)
+
+The GYM\git-exercises>git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 330 bytes | 330.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/kelliaUmuhire/git-exercises.git
+   6d5faa1..a3b6746  main -> main
+
+The GYM\git-exercises>git push git-copy main
+Enumerating objects: 32, done.
+Counting objects: 100% (32/32), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (30/30), done.
+Writing objects: 100% (32/32), 4.56 KiB | 2.28 MiB/s, done.
+Total 32 (delta 17), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (17/17), done.
+To https://github.com/kelliaUmuhire/git-exercises-copy.git
+ * [new branch]      main -> main
+```
