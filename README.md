@@ -252,3 +252,100 @@ To https://github.com/kelliaUmuhire/git-exercises.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 ```
+
+### Exercise 2
+
+```bash
+The GYM\git-exercises>git checkout main
+Switched to branch 'main'
+
+The GYM\git-exercises>git add .
+
+The GYM\git-exercises>git commit -m "Added changes to services page"
+[main e944465] Added changes to services page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+The GYM\git-exercises>git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+The GYM\git-exercises>git push --set-upstream origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 330 bytes | 330.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/kelliaUmuhire/git-exercises.git
+   fdc23b2..e944465  main -> main
+branch 'main' set up to track 'origin/main'.
+
+The GYM\git-exercises>git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+The GYM\git-exercises>git diff
+
+The GYM\git-exercises>git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+The GYM\git-exercises>git diff
+diff --cc services.html
+index c6025a7,f470287..0000000
+--- a/services.html
++++ b/services.html
+@@@ -6,9 -6,6 +6,13 @@@
+      <title>Services Page</title>
+    </head>
+    <body>
+++<<<<<<< HEAD
+ +    <h1>Services</h1>
+ +    <p>
+ +      The main purpose of the services page is to show the services we provide
+ +    </p>
+++=======
++     <h1>Services Main Page</h1>
+++>>>>>>> main
+    </body>
+  </html>
+
+The GYM\git-exercises>git merge main
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+The GYM\git-exercises>git add .
+
+The GYM\git-exercises>git commit -m "Resolved conflicts"
+[ft/service-redesign d8618e3] Resolved conflicts
+
+The GYM\git-exercises>git merge main
+Already up to date.
+
+The GYM\git-exercises>git push
+fatal: The current branch ft/service-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/service-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+The GYM\git-exercises>git push --set-upstream origin ft/service-redesign
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 222 bytes | 222.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/kelliaUmuhire/git-exercises.git
+   51a94c9..d8618e3  ft/service-redesign -> ft/service-redesign
+```
