@@ -601,3 +601,36 @@ remote: Resolving deltas: 100% (17/17), done.
 To https://github.com/kelliaUmuhire/git-exercises-copy.git
  * [new branch]      main -> main
 ```
+
+### Exercise 2
+
+```bash
+C:\Users\Kellia\Documents\Projects\STUDIES\The GYM\git-exercises>git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+C:\Users\Kellia\Documents\Projects\STUDIES\The GYM\git-exercises>git merge --squash ft/footer
+Updating a3b6746..3edefba
+Fast-forward
+Squash commit -- not updating HEAD
+ home.html | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+C:\Users\Kellia\Documents\Projects\STUDIES\The GYM\git-exercises>git commit -m "Footer changes squashing"
+[ft/squashing 590c5e6] Footer changes squashing
+ 1 file changed, 5 insertions(+)
+
+C:\Users\Kellia\Documents\Projects\STUDIES\The GYM\git-exercises>git push origin ft/squashing
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 372 bytes | 372.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/kelliaUmuhire/git-exercises/pull/new/ft/squashing
+remote:
+To https://github.com/kelliaUmuhire/git-exercises.git
+ * [new branch]      ft/squashing -> ft/squashing
+```
