@@ -605,21 +605,21 @@ To https://github.com/kelliaUmuhire/git-exercises-copy.git
 ### Exercise 2
 
 ```bash
-C:\Users\Kellia\Documents\Projects\STUDIES\The GYM\git-exercises>git checkout -b ft/squashing
+The GYM\git-exercises>git checkout -b ft/squashing
 Switched to a new branch 'ft/squashing'
 
-C:\Users\Kellia\Documents\Projects\STUDIES\The GYM\git-exercises>git merge --squash ft/footer
+The GYM\git-exercises>git merge --squash ft/footer
 Updating a3b6746..3edefba
 Fast-forward
 Squash commit -- not updating HEAD
  home.html | 5 +++++
  1 file changed, 5 insertions(+)
 
-C:\Users\Kellia\Documents\Projects\STUDIES\The GYM\git-exercises>git commit -m "Footer changes squashing"
+The GYM\git-exercises>git commit -m "Footer changes squashing"
 [ft/squashing 590c5e6] Footer changes squashing
  1 file changed, 5 insertions(+)
 
-C:\Users\Kellia\Documents\Projects\STUDIES\The GYM\git-exercises>git push origin ft/squashing
+The GYM\git-exercises>git push origin ft/squashing
 Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
 Delta compression using up to 8 threads
@@ -633,4 +633,38 @@ remote:      https://github.com/kelliaUmuhire/git-exercises/pull/new/ft/squashin
 remote:
 To https://github.com/kelliaUmuhire/git-exercises.git
  * [new branch]      ft/squashing -> ft/squashing
+```
+
+## Bundle 5
+
+### Exercise 5
+
+```bash
+The GYM>git clone https://github.com/kelliaUmuhire/git-cafe-exercise.git
+Cloning into 'git-cafe-exercise'...
+remote: Enumerating objects: 107, done.
+remote: Counting objects: 100% (14/14), done.
+remote: Compressing objects: 100% (10/10), done.
+Receiving objects:  99% (106/107), 1.92 MiB | 1.43 MiB/sused 93
+Receiving objects: 100% (107/107), 1.95 MiB | 1.06 MiB/s, done.
+Resolving deltas: 100% (5/5), done.
+
+The GYM>cd git-cafe-exercise
+
+The GYM\git-cafe-exercise>git add .
+
+The GYM\git-cafe-exercise>git commit -m "Edited index.html"
+[main c80145c] Edited index.html
+ 1 file changed, 399 insertions(+), 239 deletions(-)
+
+The GYM\git-cafe-exercise>git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.55 KiB | 1.55 MiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/kelliaUmuhire/git-cafe-exercise.git
+   d1d3f9c..c80145c  main -> main
 ```
