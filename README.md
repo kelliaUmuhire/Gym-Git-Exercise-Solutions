@@ -484,3 +484,80 @@ remote: Resolving deltas: 100% (1/1), completed with 1 local object.
 To https://github.com/kelliaUmuhire/git-exercises.git
    cef4dd8..c96f4e0  ft/faq-page -> ft/faq-page
 ```
+
+### Exercise 2
+
+```bash
+The GYM\git-exercises>git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+The GYM\git-exercises>git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+The GYM\git-exercises>git add .
+
+The GYM\git-exercises>git commit -m "Update home page"
+[main c0ab80d] Update home page
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+The GYM\git-exercises>git push
+To https://github.com/kelliaUmuhire/git-exercises.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/kelliaUmuhire/git-exercises.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+The GYM\git-exercises>git pull
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 924 bytes | 11.00 KiB/s, done.
+From https://github.com/kelliaUmuhire/git-exercises
+   e944465..115c92e  main       -> origin/main
+Merge made by the 'ort' strategy.
+ services.html | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+The GYM\git-exercises>git push
+Enumerating objects: 9, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 589 bytes | 589.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+To https://github.com/kelliaUmuhire/git-exercises.git
+   115c92e..6d5faa1  main -> main
+
+The GYM\git-exercises>git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+The GYM\git-exercises>git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+The GYM\git-exercises>git add .
+
+The GYM\git-exercises>git commit -m "Updated home page"
+[ft/home-page-redesign e5a20e9] Updated home page
+ 1 file changed, 1 insertion(+)
+
+The GYM\git-exercises>git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 1.52 KiB | 1.52 MiB/s, done.
+Total 14 (delta 7), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (7/7), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/kelliaUmuhire/git-exercises/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/kelliaUmuhire/git-exercises.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+```
